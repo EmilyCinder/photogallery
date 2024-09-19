@@ -1,0 +1,306 @@
+/* Global Styles */
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
+
+/*-------------------- CSS RESET ---------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+    --color-teal: #007d7b;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --font-main: Arial, Helvetica, sans-serif;
+    --font-size-h1: 3em;
+    --font-size-h2: 2em;
+    --font-size-nav: 1.5em;
+    --font-size-text: 1.25em;
+    --font-size-small: 1em;
+}
+
+/* -------------------- GLOBAL STYLES --------------------------------------- */
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 200px;
+}
+
+p {
+    font-size: var(--font-size-text);
+}
+
+figcaption,
+label,
+input,
+small {
+    font-size: var(--font-size-small);
+}
+
+nav a {
+    font-size: var(--font-size-nav);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    color: var(--color-teal);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+
+.header-section {
+    background-color: var(--color-white);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.header-section h1 {
+    float: left;
+}
+
+
+.nav-section {
+    background-color: var(--color-black);
+    padding: 10px;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+
+#about,
+#gallery {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    padding: 20px;
+}
+
+#about h2,
+#gallery h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#about p,
+#gallery p {
+    font-weight: bold;
+}
+
+.content-section h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+}
+
+
+.about,
+.gallery,
+.contact {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 20px;
+}
+
+.gallery-grid figure {
+    position: relative;
+}
+
+.gallery-grid figcaption {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    color: black;
+    text-align: center;
+    background: none;
+}
+
+.gallery-grid figure:nth-child(1) figcaption {
+    color: white;
+    bottom: 0;
+}
+
+.gallery-grid figure:nth-child(2) figcaption {
+    color: white;
+    top: 0;
+}
+
+.gallery-grid figure:nth-child(3) figcaption {
+    color: white;
+    bottom: 0;
+}
+
+.gallery-grid figure:nth-child(4) figcaption {
+    color: black;
+    top: 0;
+}
+
+.gallery-grid figure:nth-child(5) figcaption {
+    color: black;
+    top: 0;
+}
+
+gallery-grid figure:nth-child(6) figcaption {
+    color: black;
+    bottom: 0;
+}
+
+.gallery-grid figure:nth-child(7) figcaption {
+    color: white;
+    bottom: 0;
+}
+
+.gallery-grid figure:nth-child(8) figcaption {
+    color: black;
+    top: 0;
+}
+
+.gallery-grid figure:nth-child(9) figcaption {
+    color: black;
+    top: 0;
+}
+
+.gallery-grid figure:nth-child(10) figcaption {
+    color: black;
+    top: 0;
+}
+
+.gallery-grid figure:nth-child(11) figcaption {
+    color: black;
+    top: 0;
+}
+
+.gallery-grid figure:nth-child(12) figcaption {
+    color: white;
+    top: 0;
+}
+
+
+#contact h2,
+#contact p {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#contact {
+    margin-top: 30px;
+}
+
+#contact h2 {
+    margin-bottom: 15px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+#contact label,
+#contact input,
+#contact textarea,
+#contact button {
+    width: 80%;
+    font-size: var(--font-size-small);
+}
+
+#contact label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: var(--color-white);
+    line-height: 1;
+}
+
+#contact input,
+#contact textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    background-color: var(--color-white);
+    color: var(--color-teal);
+    border: 1px solid var(--color-black);
+    box-sizing: border-box;
+    height: 40px;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    color: var(--color-teal);
+}
+
+#contact textarea {
+    resize: none;
+    height: 40px;
+}
+
+#contact button {
+    background-color: var(--color-teal);
+    color: var(--color-white);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: var(--font-size-text);
+    border-radius: 25px;
+    width: 40%;
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    color: var(--color-white);
+    margin-top: 30px;
+    padding: 20px 0;
+    background-color: var(--color-black);
+}
+
+
+
+/* Breakpoints */
+@media (max-width: 1300px) {
+}
+
+@media (max-width: 880px) {
+}
+
+@media (max-width: 485px) {
+}
